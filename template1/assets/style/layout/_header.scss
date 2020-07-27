@@ -1,0 +1,39 @@
+//header
+.chermoi {
+  &-header {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    padding: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .3s ease-in-out;
+
+    &.is--active {
+      background: rgba(0,0,0,.7);
+      padding: 1rem 2rem;
+    }
+
+    &__logo {
+      color: $white;
+      font-size: 1.5rem;
+    }
+  }
+  &-menu {
+    &-list {
+      display: flex;
+      align-items: center;
+    }
+    &__item {
+      color: #ffffff;
+      opacity: 0.7;
+    }
+    &__link {
+      padding: .8rem 1.2rem;
+      font-size: 1.1rem;
+    }
+  }
+}

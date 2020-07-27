@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>메인</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#6B58A7">
+  <link href="" rel="shortcut icon">
+  <meta name="naver-site-verification" content=""/>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="Chermoi">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Chermoi">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <link rel="stylesheet" href="assets/style/index.css">
+  <link rel="stylesheet" type="text/css" href="assets/style/vendors/jquery.fullpage.2.9.6.min.css" />
+  <script type="text/javascript" src="assets/js/vendors/jquery.2.2.4.min.js"></script>
+  <script type="text/javascript" src="assets/js/vendors/jquery.fullpage.2.9.6.min.js"></script>
+</head>
+<body>
+  <header class="chermoi-header">
+    <h1 class="chermoi-header__logo">
+      <a href="/">
+        NATIONAL<br>GEO
+<!--        <img src="/assets/images/kstarpay/common/starpay_logo.svg" alt="NATIONAL GEOGRAPHICY" class="navy-logo" width="151" height="33">-->
+      </a>
+    </h1>
+    <nav class="chermoi-menu">
+      <ul class="chermoi-menu-list">
+        <li class="chermoi-menu__item active" data-menuanchor="firstPage"><a class="chermoi-menu__link" href="#firstPage">메뉴1</a></li>
+        <li class="chermoi-menu__item" data-menuanchor="secondPage"><a class="chermoi-menu__link" href="#secondPage">메뉴2</a></li>
+        <li class="chermoi-menu__item" data-menuanchor="thirdPage"><a class="chermoi-menu__link" href="#thirdPage">메뉴3</a></li>
+        <li class="chermoi-menu__item" data-menuanchor="fourthPage"><a class="chermoi-menu__link" href="#fourthPage">메뉴4</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="fullpage">
+    <section class="section main" data-anchor="firstPage">
+      <p>
+        for the nature
+      </p>
+    </section>
+    <div class="section" data-anchor="secondPage">Some section</div>
+    <div class="section" data-anchor="thirdPage">Some section</div>
+    <div class="section" data-anchor="fourthPage">Some section</div>
+  </div>
+  <script>
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+        parallax: true,
+        menu: '.chermoi-menu',
+        easingcss3: 'ease-out',
+        navigation: true,
+        navigationPosition: 'right',
+        anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+        afterLoad: function (anchorLink, index) {
+          const loadedSection = $(this);
+          if (index === 1) {
+            $('.chermoi-header').removeClass('is--active');
+          }else {
+            $('.chermoi-header').addClass('is--active');
+          }
+        },
+        onLeave: function (index, nextIndex, direction) {
+          const leavingSection = $(this);
+          if (index === 1) {
+            $('.chermoi-header').addClass('is--active');
+            // $('.hd').mouseleave(function () {
+            //   $('.hd').addClass('on');
+            // });
+          }
+        }
+      })
+    });
+  </script>
+</body>
+</html>

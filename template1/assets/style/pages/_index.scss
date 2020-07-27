@@ -1,0 +1,19 @@
+.section {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  &.main {
+    background-image: url("../images/template1-slide1.jpg");
+    text-align: center;
+
+    &:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-color: rgba(0,0,0,.4);
+      position: absolute;
+      top: 0;
+    }
+  }
+}
