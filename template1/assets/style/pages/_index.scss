@@ -15,5 +15,14 @@
       position: absolute;
       top: 0;
     }
+
+    .fp-tableCell {
+      position: relative;
+      z-index: 2;
+    }
+    .main__text {
+      color: $white;
+      font-size: 5rem;
+    }
   }
 }
