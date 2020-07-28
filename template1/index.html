@@ -29,7 +29,7 @@
     </h1>
     <nav class="chermoi-menu">
       <ul class="chermoi-menu-list">
-        <li class="chermoi-menu__item active" data-menuanchor="firstPage"><a class="chermoi-menu__link" href="#firstPage">메뉴1</a></li>
+        <li class="chermoi-menu__item active" data-menuanchor="firstPage"><a class="chermoi-menu__link" href="#firstPage">MENU1</a></li>
         <li class="chermoi-menu__item" data-menuanchor="secondPage"><a class="chermoi-menu__link" href="#secondPage">메뉴2</a></li>
         <li class="chermoi-menu__item" data-menuanchor="thirdPage"><a class="chermoi-menu__link" href="#thirdPage">메뉴3</a></li>
         <li class="chermoi-menu__item" data-menuanchor="fourthPage"><a class="chermoi-menu__link" href="#fourthPage">메뉴4</a></li>
@@ -37,14 +37,41 @@
     </nav>
   </header>
   <div id="fullpage">
-    <section class="section main" data-anchor="firstPage">
-      <p class="main__text">
-        for the nature
-      </p>
+    <section class="section is--dark first-section main" data-anchor="firstPage">
+      <div class="slide">
+        <p class="main__text">
+          we work<br>
+          <strong class="main__text--impact">for human</strong>
+        </p>
+        <p class="main-scroll">
+          scroll down<br>
+          <i class="fas fa-long-arrow-alt-down main-scroll__icon"></i>
+        </p>
+      </div>
+      <div class="slide">
+        <p class="main__text">
+          we work<br>
+          <strong class="main__text--impact">for human</strong>
+        </p>
+        <p class="main-scroll">
+          scroll down<br>
+          <i class="fas fa-long-arrow-alt-down main-scroll__icon"></i>
+        </p>
+      </div>
+      <div class="slide">
+        <p class="main__text">
+          we work<br>
+          <strong class="main__text--impact">for human</strong>
+        </p>
+        <p class="main-scroll">
+          scroll down<br>
+          <i class="fas fa-long-arrow-alt-down main-scroll__icon"></i>
+        </p>
+      </div>
     </section>
-    <div class="section" data-anchor="secondPage">Some section</div>
+    <div class="section is--dark second-section service" data-anchor="secondPage">Some section</div>
     <div class="section" data-anchor="thirdPage">Some section</div>
-    <div class="section" data-anchor="fourthPage">Some section</div>
+    <div class="section fp-auto-height" data-anchor="fourthPage">Some section</div>
   </div>
   <script>
     $(document).ready(function() {
@@ -54,9 +81,10 @@
         easingcss3: 'ease-out',
         navigation: true,
         navigationPosition: 'right',
+        navigationTooltips: ['MENU1', '메뉴2', '메뉴3', '메뉴4'],
+        showActiveTooltip: true,
         anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
         afterLoad: function (anchorLink, index) {
-          const loadedSection = $(this);
           if (index === 1) {
             $('.chermoi-header').removeClass('is--active');
           }else {
@@ -64,15 +92,70 @@
           }
         },
         onLeave: function (index, nextIndex, direction) {
-          const leavingSection = $(this);
           if (index === 1) {
             $('.chermoi-header').addClass('is--active');
-            // $('.hd').mouseleave(function () {
-            //   $('.hd').addClass('on');
-            // });
+            if (direction === 'down') {
+              $('.slide__img img').eq(0).removeClass('ani_main_img_1 ani_main_img_1r');
+              $('.slide__img img').eq(1).removeClass('ani_main_img_2 ani_main_img_2r');
+              $('.slide__img img').eq(2).removeClass('ani_main_img_3 ani_main_img_3r');
+              $('.slide__title .animationDelay').removeClass('fadeInUp animated');
+              if (nextIndex === 2) {
+                $('.wallet-process .animatable').addClass('fadeInUp animated');
+              }
+              else if (nextIndex === 3) {
+                $('.face-check .face-check-left .animatable').addClass('fadeInUp animated');
+                $('.face-check .face-check-right.animatable').addClass('bounceInRight animated');
+              } else if (nextIndex === 4) {
+                $('.charge-conv .charge-conv-left.animatable').addClass('bounceInLeft animated');
+                $('.charge-conv .charge-conv-right .animatable').addClass('fadeInUp animated');
+              } else if (nextIndex === 5) {
+                $('.safe-fin-tech .animatable').addClass('fadeInUp animated');
+              } else if (nextIndex === 6) {
+                $('.starpay-use .starpay-use__title.animatable').addClass('fadeIn animated');
+                $('.starpay-use .starpay-use-list .animatable').addClass('bounceInLeft animated');
+              }
+            }
+          } else if (index > 1) {
+            if (nextIndex === 1 && direction === 'up') {
+              $('.chermoi-header').removeClass('is--active');
+            } else if (nextIndex === 2) {
+              $('.wallet-process .animatable').addClass('fadeInUp animated');
+              $('.face-check .animatable, .charge-conv .animatable, .safe-fin-tech .animatable, .starpay-use .animatable')
+                .removeClass('fadeInUp bounceInRight bounceInLeft animated');
+            } else if (nextIndex === 3) {
+              $('.face-check .face-check-left .animatable').addClass('fadeInUp animated');
+              $('.face-check .face-check-right.animatable').addClass('bounceInRight animated');
+              $('.wallet-process .animatable, .charge-conv .animatable, .safe-fin-tech .animatable, .starpay-use .animatable')
+                .removeClass('fadeInUp bounceInRight bounceInLeft animated');
+            } else if (nextIndex === 4) {
+              $('.charge-conv .charge-conv-left.animatable').addClass('bounceInLeft animated');
+              $('.charge-conv .charge-conv-right .animatable').addClass('fadeInUp animated');
+              $('.wallet-process .animatable, .face-check .animatable, .safe-fin-tech .animatable, .starpay-use .animatable')
+                .removeClass('fadeInUp bounceInRight bounceInLeft animated');
+            } else if (nextIndex === 5) {
+              $('.safe-fin-tech .animatable').addClass('fadeInUp animated');
+              $('.wallet-process .animatable, .face-check .animatable, .charge-conv .animatable, .starpay-use .animatable')
+                .removeClass('fadeInUp bounceInRight bounceInLeft animated');
+            } else if (nextIndex === 6) {
+              $('.starpay-use .starpay-use__title.animatable').addClass('fadeIn animated');
+              $('.starpay-use .starpay-use-list .animatable').addClass('bounceInLeft animated');
+              $('.wallet-process .animatable, .face-check .animatable, .charge-conv .animatable, .safe-fin-tech .animatable')
+                .removeClass('fadeInUp bounceInRight bounceInLeft animated');
+            }
           }
         }
       })
+
+      $(window).scroll(function(){
+        let max = 1000; //100% 투명할때의 스크롤 값
+        let scrollPX = $(this).scrollTop();
+        console.log(scrollPX)
+        if( scrollPX  < max ) {
+          $("#bg").css({"opacity": (max-scrollPX)/max });
+        }else{
+          $("#bg").css({"opacity": 0});
+        }
+      });
     });
   </script>
 </body>
