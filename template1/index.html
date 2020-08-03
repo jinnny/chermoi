@@ -19,8 +19,12 @@
   <link rel="stylesheet" href="assets/style/index.css">
   <link rel="stylesheet" type="text/css" href="assets/style/vendors/fontawesome.free.5.14.0.web.all.min.css" />
   <link rel="stylesheet" type="text/css" href="assets/style/vendors/jquery.fullpage.2.9.6.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/style/vendors/bootstrap-grid.min.css" />
   <script type="text/javascript" src="assets/js/vendors/jquery.2.2.4.min.js"></script>
   <script type="text/javascript" src="assets/js/vendors/jquery.fullpage.2.9.6.min.js"></script>
+  <script type="text/javascript" src="assets/js/vendors/jquery.fullpage.extensions.2.9.6.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
   <header class="chermoi-header">
@@ -29,82 +33,166 @@
     </h1>
     <nav class="chermoi-menu">
       <ul class="chermoi-menu-list">
-        <li class="chermoi-menu__item active" data-menuanchor="firstPage"><a class="chermoi-menu__link" href="#firstPage">MENU1</a></li>
-        <li class="chermoi-menu__item" data-menuanchor="secondPage"><a class="chermoi-menu__link" href="#secondPage">메뉴2</a></li>
-        <li class="chermoi-menu__item" data-menuanchor="thirdPage"><a class="chermoi-menu__link" href="#thirdPage">메뉴3</a></li>
-        <li class="chermoi-menu__item" data-menuanchor="fourthPage"><a class="chermoi-menu__link" href="#fourthPage">메뉴4</a></li>
+        <li class="chermoi-menu__item active" data-menuanchor="home"><a class="chermoi-menu__link" href="#firstPage">HOME</a></li>
+        <li class="chermoi-menu__item" data-menuanchor="ourService"><a class="chermoi-menu__link" href="#secondPage">OUT SERVICE</a></li>
+        <li class="chermoi-menu__item" data-menuanchor="portfolio"><a class="chermoi-menu__link" href="#thirdPage">PORTFOLIO</a></li>
+        <li class="chermoi-menu__item" data-menuanchor="contact"><a class="chermoi-menu__link" href="#thirdPage">CONTACT</a></li>
+        <li class="chermoi-menu__item" data-menuanchor="inquiry"><a class="chermoi-menu__link" href="#fourthPage">INQUIRY</a></li>
       </ul>
     </nav>
   </header>
   <div id="fullpage">
-    <section class="section is--dark first-section main" data-anchor="firstPage">
-      <div class="slide">
-        <p class="main__text">
-          we work<br>
-          <strong class="main__text--impact">for human</strong>
-        </p>
-      </div>
-      <div class="slide">
-        <p class="main__text">
-          we work<br>
-          <strong class="main__text--impact">for human</strong>
-        </p>
-      </div>
-      <div class="slide">
-        <p class="main__text">
-          we work<br>
-          <strong class="main__text--impact">for human</strong>
-        </p>
-      </div>
+    <section class="section first-section main" data-anchor="home">
       <p class="main-scroll">
         scroll down<br>
         <i class="fas fa-long-arrow-alt-down main-scroll__icon"></i>
       </p>
-    </section>
-    <div class="section is--dark second-section service" data-anchor="secondPage">
-      <div class="layout">
-        <header class="service-header">
-          <h2 class="service__title">OUT SERVICE</h2>
-          <p class="service__description">당신을 위한 서비스를 제공합니다.당신을 위한 서비스를 제공합니다.당신을 위한 서비스를 제공합니다.당신을 위한 서비스를 제공합니다.</p>
-        </header>
-
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background: url('./assets/images/first-section.jpg') no-repeat ">
+            <p class="main__text">
+              we work<br>
+              <strong class="main__text--impact">for human</strong>
+            </p>
+          </div>
+          <div class="swiper-slide" style="background: url('http://ksostudio.com/project/files/attach/images/610/fe9e4e97ec88df66b8f560bee4ddbbd6.jpg') no-repeat ">
+            <p class="main__text">
+              we work<br>
+              <strong class="main__text--impact">for human</strong>
+            </p>
+          </div>
+          <div class="swiper-slide" style="background: url('http://ksostudio.com/project/files/attach/images/610/fe7158dfec5794a1843e2e0b4849576c.jpg') no-repeat ">
+            <p class="main__text">
+              we work<br>
+              <strong class="main__text--impact">for human</strong><br>
+              <a href="" class="button is--rounded">MORE <i class="fas fa-plus"></i></a>
+            </p>
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
-    </div>
-    <div class="section" data-anchor="thirdPage">Some section</div>
-    <section class="section fourth-section section--width-half" data-anchor="fourthPage">
-      <div class="section-half-content inquiry-content-area">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12660.6638074316!2d127.0386642432787!3d37.504003926953104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca405861e4a67%3A0x73ec1c047764908!2z7ISc7Jq47Yq567OE7IucIOqwleuCqOq1rCDthYztl6TrnoDroZw!5e0!3m2!1sko!2skr!4v1596093987871!5m2!1sko!2skr" width="600" height="561" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        <div class="inquiry-content">
-          <h2 class="inquiry-content__title">
-            inquiry
-          </h2>
-          <p class="inquiry-content__description">
-            CherMoa에 대해 궁금한 사항은 물어보세요.
-          </p>
-          <form action="">
-            <p class="input-content">
-              <label for="name" class="input-content__label">이름</label>
-              <input type="text" id="name" name="name" class="input-content__input">
-            </p>
-            <p class="input-content">
-              <label for="phone" class="input-content__label">연락처</label>
-              <input type="text" id="phone" name="phone" class="input-content__input">
-            </p>
-            <p class="input-content">
-              <label for="email" class="input-content__label">이메일</label>
-              <input type="text" id="email" name="email" class="input-content__input">
-            </p>
-            <p class="input-content">
-              <label for="contents" class="input-content__label">내용</label>
-              <textarea id="contents" rows="4" cols="50" name="contents" class="type--textarea input-content__input"></textarea>
-            </p>
-            <input type="submit" value="문의" class="button">
-          </form>
+    </section>
+    <div class="section is--dark second-section service" data-anchor="ourService">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <header class="service-header">
+              <h2 class="service__title">OUT SERVICE</h2>
+              <p class="service__description">
+                Aenean semper vehicula est posuere consequat.<br>
+                Aliquam ante arcu, molestie vel eleifend sit amet, facilisis vel arcu. <br>
+                Nam consectetur lobortis erat, ut scelerisque nibh iaculis ac.</p>
+            </header>
+          </div>
         </div>
       </div>
-<!--      <div class="section-half-content">-->
-<!--        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12660.6638074316!2d127.0386642432787!3d37.504003926953104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca405861e4a67%3A0x73ec1c047764908!2z7ISc7Jq47Yq567OE7IucIOqwleuCqOq1rCDthYztl6TrnoDroZw!5e0!3m2!1sko!2skr!4v1596093987871!5m2!1sko!2skr" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>-->
-<!--      </div>-->
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-4 service-content__content mb-5">
+            <strong class="service-content-content__title mb-2">
+              <i class="fas fa-envelope-open mr-2"></i>
+              Lorem ipsum
+            </strong>
+            <p class="service-content__description mb-3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec nulla massa. Praesent vel aliquet sem, vel pulvinar augue. Curabitur fringilla enim ac sagittis suscipit. Vivamus sodales vitae arcu quis iaculis. Integer sit amet velit pharetra, blandit felis sed, hendrerit turpis. Ut tortor arcu, vulputate vitae molestie id, feugiat nec lorem. Ut varius metus quis laoreet accumsan.
+            </p>
+            <a href="" class="button color--point is--rounded">MORE <i class="fas fa-plus"></i></a>
+          </div>
+          <div class="col-12 col-sm-4 service-content__content mb-5">
+            <strong class="service-content-content__title mb-2">
+              <i class="fas fa-pen-alt mr-2"></i>
+              Quisque
+            </strong>
+            <p class="service-content__description mb-3">
+              Quisque condimentum, diam a pulvinar egestas, ex lectus rhoncus felis, a pharetra justo magna eget libero. Nullam sed urna tincidunt est placerat euismod. Duis ut metus a leo hendrerit blandit. Suspendisse viverra, eros ut suscipit tincidunt, ipsum magna iaculis augue, eu imperdiet dolor purus ut diam. Mauris vehicula tortor urna, consequat fermentum erat cursus quis. Aenean lacinia orci ac porta vestibulum.
+            </p>
+            <a href="" class="button color--point is--rounded">MORE <i class="fas fa-plus"></i></a>
+          </div>
+          <div class="col-12 col-sm-4 service-content__content">
+            <strong class="service-content-content__title mb-2">
+              <i class="fas fa-music mr-2"></i>
+              Nunc cursus
+            </strong>
+            <p class="service-content__description mb-3">
+              Nunc cursus mattis erat vitae faucibus. In neque odio, volutpat nec ultricies ut, scelerisque in orci. Curabitur condimentum interdum ligula eget porta. Nunc sit amet neque semper, pulvinar metus et, fringilla ante. Nunc nec lacus sem. Proin hendrerit aliquet egestas. In et neque mattis, lacinia lorem sit amet, feugiat leo. Phasellus blandit mauris tortor, sed pharetra elit tristique vel. Cras dolor mi, lacinia et justo quis, fermentum lacinia dui.
+            </p>
+            <a href="" class="button color--point is--rounded">MORE <i class="fas fa-plus"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section" data-anchor="portfolio">
+      PORTFOLIO
+    </div>
+    <section class="section fourth-section section--width-half" data-anchor="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <header class="service-header is--dark is--narrow-next">
+              <h2 class="service__title">CONTACT</h2>
+              <p class="service__description">
+                Aenean semper vehicula est posuere consequat.
+            </header>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-6 p-0">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12660.6638074316!2d127.0386642432787!3d37.504003926953104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca405861e4a67%3A0x73ec1c047764908!2z7ISc7Jq47Yq567OE7IucIOqwleuCqOq1rCDthYztl6TrnoDroZw!5e0!3m2!1sko!2skr!4v1596093987871!5m2!1sko!2skr" width="100%" height="561" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+          <div class="col-12 col-sm-6 p-0">
+
+          </div>
+         </div>
+        </div>
+    </section>
+    <section class="section fourth-section section--width-half" data-anchor="inquiry">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <header class="service-header is--dark is--narrow-next">
+              <h2 class="service__title">INQUIRY</h2>
+              <p class="service__description">
+                Aenean semper vehicula est posuere consequat.
+            </header>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-6 offset-2 p-0">
+            <div class="inquiry-content">
+<!--              <h2 class="inquiry-content__title">-->
+<!--                inquiry-->
+<!--              </h2>-->
+<!--              <p class="inquiry-content__description">-->
+<!--                CherMoa에 대해 궁금한 사항은 물어보세요.-->
+<!--              </p>-->
+              <form action="">
+                <p class="input-content">
+                  <label for="name" class="input-content__label">이름</label>
+                  <input type="text" id="name" name="name" class="input-content__input">
+                </p>
+                <p class="input-content">
+                  <label for="phone" class="input-content__label">연락처</label>
+                  <input type="text" id="phone" name="phone" class="input-content__input">
+                </p>
+                <p class="input-content">
+                  <label for="email" class="input-content__label">이메일</label>
+                  <input type="text" id="email" name="email" class="input-content__input">
+                </p>
+                <p class="input-content">
+                  <label for="contents" class="input-content__label">내용</label>
+                  <textarea id="contents" rows="4" cols="50" name="contents" class="type--textarea input-content__input"></textarea>
+                </p>
+                <input type="submit" value="문의" class="button--submit">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
   <script>
@@ -121,12 +209,15 @@
       $('#fullpage').fullpage({
         parallax: true,
         menu: '.chermoi-menu',
-        easingcss3: 'ease-out',
+        css3: true,
         navigation: true,
+        responsiveWidth: 991,
         navigationPosition: 'right',
-        navigationTooltips: ['MENU1', '메뉴2', '메뉴3', '메뉴4'],
+        fadingEffect: true,
+        continuousVertical: true,
+        navigationTooltips: ['HOME', 'OUR SERVICE', 'PORTFOLIO', 'CONTACT', 'INQUIRY'],
         showActiveTooltip: true,
-        anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+        anchors:['home', 'ourService', 'portfolio', 'contact', 'inquiry'],
         afterLoad: function (anchorLink, index) {
           if (index === 1) {
             $('.chermoi-header').removeClass('is--active');
@@ -186,6 +277,15 @@
                 .removeClass('fadeInUp bounceInRight bounceInLeft animated');
             }
           }
+        }
+      })
+      var mySwiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        loop: true,
+        effect: 'fade',
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
         }
       })
 
