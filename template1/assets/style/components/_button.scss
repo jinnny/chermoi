@@ -8,10 +8,11 @@
   font-size: 0.9rem;
   height: 36px;
   line-height: 36px;
+  box-sizing: border-box;
   &.color--point {
-    //background: $yellow;
-    color: $yellow;
-    border-color: $yellow;
+    background: $blue;
+    color: $white;
+    border-color: $blue;
   }
   &.is--mini {
     height: 30px;

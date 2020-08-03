@@ -61,7 +61,7 @@
       content: '';
       width: 4px;
       height: 100px;
-      background: #ffc107;
+      background: $blue;
       display: inline-block;
     }
     &.is--dark {
@@ -112,14 +112,14 @@
   &.second-section {
     background-image: url("../images/second-section.jpg");
     .service-content__content {
-      color: $white;
+      color: $black;
       .service-content-content__title {
         font-size: 1.4rem;
         //margin-bottom: .5rem;
         display: block;
         font-weight: 600;
         .fas {
-          //color: $yellow;
+          //color: $blue;
           font-size: 1rem;
         }
       }
@@ -128,17 +128,24 @@
       opacity: .8;
     }
   }
-  &.fourth-section {
+  &.inquiry-section {
     background-image: url("../images/inquiry-content.jpg");
     background-repeat: no-repeat;
     background-position: 100% 0;
-    background-size: contain;
+    background-size: cover;
+  }
+  &.contact-section {
+    //background-image: url("../images/contact-section.jpg");
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: cover;
+    background-color: $white;
   }
   .inquiry-content {
     background: $white;
     padding: 3rem;
     @include shadow;
-    height: 561px;
+    min-height: 500px;
     box-sizing: border-box;
     &__title {
       text-transform: uppercase;
@@ -155,6 +162,32 @@
       text-align: center;
     }
   }
+  .contact-info {
+    background: $white;
+    height: 561px;
+    @include shadow;
+  }
+}
+.map-area {
+  position: relative;
+  &:after {
+    content: '';
+    width: 300px;
+    height: 450px;
+    position: absolute;
+    right: -80px;
+    top: -50px;
+    display: block;
+    background: $blue;
+  }
+  .iframe-map {
+    position: relative;
+    z-index: 1;
+    border: 0;
+  }
+}
+#fp-nav ul li .fp-tooltip {
+  color: $black;
 }
 @-moz-keyframes bounce{from{bottom:55px;color:rgba(247,247,247,0.2)}to{bottom:80px;color:#f7f7f7}}
 @-webkit-keyframes bounce{from{bottom:55px;color:rgba(247,247,247,0.2)}to{bottom:80px;color:#f7f7f7}}
