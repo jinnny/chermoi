@@ -6,16 +6,30 @@
     position: absolute;
     z-index: 11;
     top: calc(50% - 60px);
-    left: calc(50% - 250px);
+    left: calc(50% - 297.5px);
+    @media all and (max-width: 990px) {
+      top: calc(50% - 100px);
+      left: 0;
+    }
   }
    .swiper-container {
      height: 100%;
    }
   .swiper-button-prev {
-    left: 100px;
+    @media all and (min-width: 991px) {
+      left: 100px;
+    }
+    @media all and (max-width: 990px) {
+      right: 40px;
+    }
   }
   .swiper-button-next {
-    right: 100px;
+    @media all and (min-width: 991px) {
+      right: 100px;
+    }
+    @media all and (max-width: 990px) {
+      right: 10px;
+    }
   }
   .swiper-button-next, .swiper-button-prev {
     color: $white;
@@ -23,6 +37,13 @@
     transition: opacity .2s ease-in-out;
     &:hover {
       opacity: 1;
+    }
+    @media all and (max-width: 990px) {
+      left: auto;
+      top: calc(100% - 34px);
+      &:after {
+        font-size: 2rem;
+      }
     }
   }
   &.is--dark {
@@ -45,9 +66,15 @@
     letter-spacing: 5px;
     font-family: $english;
     font-weight: 900;
+    @media all and (max-width: 990px) {
+      font-size: 1.7rem;
+    }
   }
   .service__description {
     opacity: .7;
+    @media all and (max-width: 990px) {
+      display: none;
+    }
   }
   .service-header {
     color: $white;
@@ -63,6 +90,12 @@
       height: 100px;
       background: $blue;
       display: inline-block;
+    }
+    @media all and (max-width: 990px) {
+      padding-left: 2rem;
+      &:before {
+        height: 60px;
+      }
     }
     &.is--dark {
       color: $black;
@@ -85,7 +118,9 @@
         text-transform: uppercase;
         letter-spacing: 10px;
         font-family: $english;
-
+        @media all and (max-width: 990px) {
+          font-size: 4.5rem;
+        }
       }
     }
 
@@ -126,6 +161,9 @@
     }
     .service-content__description {
       opacity: .8;
+      @media all and (max-width: 990px) {
+        @include textClamp(3)
+      }
     }
   }
   &.inquiry-section {
@@ -134,19 +172,17 @@
     background-position: 100% 0;
     background-size: cover;
   }
-  &.contact-section {
-    //background-image: url("../images/contact-section.jpg");
-    background-repeat: no-repeat;
-    background-position: 100% 0;
-    background-size: cover;
-    background-color: $white;
-  }
+  // 질문
   .inquiry-content {
     background: $white;
     padding: 3rem;
     @include shadow;
     min-height: 500px;
     box-sizing: border-box;
+    @media all and (max-width: 990px) {
+      padding: 1rem;
+      min-height: 400px;
+    }
     &__title {
       text-transform: uppercase;
       font-size: 2.3rem;
@@ -162,10 +198,82 @@
       text-align: center;
     }
   }
+  //contact
+  &.contact-section {
+    //background-image: url("../images/map-bg.png");
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: auto;
+    background-color: $white;
+  }
   .contact-info {
-    background: $white;
-    height: 561px;
-    @include shadow;
+    @media all and (min-width: 991px) {
+      height: 560px;
+    }
+    &-content {
+      background: $white;
+      @include shadow;
+      @media all and (min-width: 991px) {
+        height: 560px;
+        padding: 5rem 3rem;
+      }
+      padding: 1rem;
+      color: $grey;
+    }
+    &__item {
+      &-item {
+        margin-bottom: 1rem;
+        font-size: 0.85rem;
+        margin-top: .4rem;
+      }
+      .fas {
+        display: block;
+        margin-top: 2rem;
+        margin-bottom: .7rem;
+        color: $blue;
+        padding-left: 0.2rem;
+        @media all and (max-width: 990px) {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
+// 포트폴리오
+.portfolio-content {
+  &__content {
+    position: relative;
+    color: $white;
+    + .portfolio-content__content + .portfolio-content__content {
+      @media all and (max-width: 990px) {
+        display: none;
+      }
+    }
+    .portfolio__img {
+      object-fit: cover;
+      height: 250px;
+      width: 100%;
+      @media all and (max-width: 990px) {
+       height: 180px;
+      }
+    }
+  }
+  &-info {
+    padding: 0.85rem 1rem;
+    right: 0;
+    top: 0;
+    box-sizing: border-box;
+    color: $black;
+  }
+  &__date {
+    font-weight: 400;
+    font-size: .8rem;
+    font-family: $english;
+    opacity: .8;
+  }
+  &__title {
+    font-size: 1.1rem;
+    font-weight: 500;
   }
 }
 .map-area {
@@ -179,12 +287,21 @@
     top: -50px;
     display: block;
     background: $blue;
+    @media all and (max-width: 990px) {
+      content: none;
+    }
   }
   .iframe-map {
     position: relative;
     z-index: 1;
     border: 0;
+    @media all and (max-width: 990px) {
+      height: 300px;
+    }
   }
+}
+.portfolio-section {
+  //background: linear-gradient(90deg, #0072ff 0%, #00d4ff 100%);
 }
 #fp-nav ul li .fp-tooltip {
   color: $black;

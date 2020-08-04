@@ -11,15 +11,16 @@
     justify-content: space-between;
     align-items: center;
     transition: all .3s ease-in-out;
-
     &.is--active {
-      //background: rgba(0,0,0,.4);
       padding: 1rem 2rem;
     }
-
     &__logo {
-      color: $white;
+      color: $black;
       font-size: 1.5rem;
+      font-family: $english;
+      .logo--emphasis {
+        color: $blue;
+      }
     }
   }
   &-menu {
@@ -49,6 +50,25 @@
       padding: .8rem 1.2rem;
       font-size: 1rem;
       display: inline-block;
+    }
+    @media all and (max-width: 990px) {
+      display: none;
+      position: fixed;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: $white;
+      &-list {
+        flex-direction: column;
+        height: 100%;
+      }
+      &__item {
+        display: block;
+        width: 100%;
+        margin: 0;
+      }
     }
   }
 }

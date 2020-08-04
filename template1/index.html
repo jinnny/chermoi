@@ -19,17 +19,17 @@
   <link rel="stylesheet" type="text/css" href="assets/style/vendors/fontawesome.free.5.14.0.web.all.min.css" />
   <link rel="stylesheet" type="text/css" href="assets/style/vendors/jquery.fullpage.2.9.6.min.css" />
   <link rel="stylesheet" type="text/css" href="assets/style/vendors/bootstrap-grid.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/style/vendors/swiper-bundle.6.1.1.min.css" />
   <script type="text/javascript" src="assets/js/vendors/jquery.2.2.4.min.js"></script>
   <script type="text/javascript" src="assets/js/vendors/jquery.fullpage.2.9.6.min.js"></script>
   <script type="text/javascript" src="assets/js/vendors/jquery.fullpage.extensions.2.9.6.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script type="text/javascript" src="assets/js/vendors/swiper-bundle.6.1.1.min.js"></script>
   <link rel="stylesheet" href="assets/style/index.css">
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
   <header class="chermoi-header">
     <h1 class="chermoi-header__logo">
-      <a href="/"><img src="./assets/images/logo.png" alt="NATIONAL GEOGRAPHICY" class="navy-logo" width="120"></a>
+      <a href="/">CHREMOI</a>
     </h1>
     <nav class="chermoi-menu">
       <ul class="chermoi-menu-list">
@@ -76,7 +76,7 @@
     <div class="section second-section service" data-anchor="ourService">
       <div class="container">
         <div class="row">
-          <div class="col-12">
+          <div class="col-12 pl-0">
             <header class="service-header is--dark">
               <h2 class="service__title">OUT SERVICE</h2>
               <p class="service__description">
@@ -122,8 +122,65 @@
         </div>
       </div>
     </div>
-    <div class="section" data-anchor="portfolio">
-      PORTFOLIO
+    <div class="section portfolio-section" data-anchor="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 pl-0">
+            <header class="service-header is--narrow-next is--dark">
+              <h2 class="service__title">PORTFOLIO</h2>
+              <p class="service__description">
+                Aenean semper vehicula est posuere consequat.
+            </header>
+          </div>
+        </div>
+      </div>
+<!--      <div class="container is&#45;&#45;wide">-->
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-4 portfolio-content__content  p-0">
+            <div class="portfolio-content-info">
+              <strong class="portfolio-content__date">2020.05</strong>
+              <h1 class="portfolio-content__title">건물 디자인</h1>
+            </div>
+            <img src="assets/images/portfolio-img1.jpg" alt="" class="portfolio__img">
+          </div>
+          <div class="col-12 col-sm-4 portfolio-content__content p-0">
+            <img src="assets/images/portfolio-img2.jpg" alt="" class="portfolio__img">
+            <div class="portfolio-content-info">
+              <strong class="portfolio-content__date">2020.01</strong>
+              <h1 class="portfolio-content__title">다이닝룸 인테리어 시공</h1>
+            </div>
+          </div>
+          <div class="col-12 col-sm-4 portfolio-content__content  p-0">
+            <div class="portfolio-content-info">
+              <strong class="portfolio-content__date">2019.09</strong>
+              <h1 class="portfolio-content__title">리빙룸 인테리어 시공</h1>
+            </div>
+            <img src="assets/images/portfolio-img3.jpg" alt="" class="portfolio__img">
+          </div>
+          <div class="col-12 col-sm-4 portfolio-content__content  p-0">
+            <div class="portfolio-content-info">
+              <strong class="portfolio-content__date">2019.05</strong>
+              <h1 class="portfolio-content__title">사무실 인테리어 시공</h1>
+            </div>
+            <img src="assets/images/portfolio-img4.jpg" alt="" class="portfolio__img">
+          </div>
+          <div class="col-12 col-sm-4 portfolio-content__content  p-0">
+            <img src="assets/images/portfolio-img6.jpg" alt="" class="portfolio__img">
+            <div class="portfolio-content-info">
+              <strong class="portfolio-content__date">2019.02</strong>
+              <h1 class="portfolio-content__title">다이닝룸 인테리어 시공</h1>
+            </div>
+          </div>
+          <div class="col-12 col-sm-4 portfolio-content__content  p-0">
+            <div class="portfolio-content-info">
+              <strong class="portfolio-content__date">2018.11</strong>
+              <h1 class="portfolio-content__title">치킨 인테리어 시공</h1>
+            </div>
+            <img src="assets/images/portfolio-img5.jpg" alt="" class="portfolio__img">
+          </div>
+        </div>
+      </div>
     </div>
     <section class="section contact-section section--width-half" data-anchor="contact">
 <!--      <div class="container">-->
@@ -140,19 +197,25 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-sm-6 p-0">
-            <div class="contact-info p-4">
+            <div class="contact-info p-sm-4">
               <header class="service-header is--narrow-next is--dark">
                 <h2 class="service__title">CONTACT</h2>
                 <p class="service__description">
                   Aenean semper vehicula est posuere consequat.
               </header>
-              <ul>
-                <li><i class="fas fa-map-marked-alt"></i> Address</li>
-                <li>서울시 강남구 테헤란로</li>
-                <li><i class="fas fa-mobile-alt"></i> Tel</li>
-                <li>000-0000-0000</li>
-                <li><i class="fas fa-envelope"></i> Email</li>
-                <li>kimandyang2020@gmail.com</li>
+              <ul class="contact-info-content">
+                <li class="contact-info__item">
+                  <i class="fas fa-map-marked-alt"></i>
+                  <p class="contact-info__item-item">서울시 강남구 테헤란로</p>
+                </li>
+                <li class="contact-info__item">
+                  <i class="fas fa-mobile-alt"></i>
+                  <p class="contact-info__item-item">000-0000-0000</p>
+                </li>
+                <li class="contact-info__item">
+                  <i class="fas fa-envelope"></i>
+                  <p class="contact-info__item-item">kimandyang2020@gmail.com</p>
+                </li>
               </ul>
             </div>
           </div>
@@ -165,7 +228,7 @@
     <section class="section inquiry-section section--width-half" data-anchor="inquiry">
       <div class="container">
         <div class="row">
-          <div class="col-12">
+          <div class="col-12 pl-0">
             <header class="service-header is--dark is--narrow-next">
               <h2 class="service__title">INQUIRY</h2>
               <p class="service__description">
@@ -225,7 +288,6 @@
         menu: '.chermoi-menu',
         css3: true,
         navigation: true,
-        responsiveWidth: 991,
         navigationPosition: 'right',
         fadingEffect: true,
         continuousVertical: true,
