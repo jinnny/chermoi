@@ -1,0 +1,109 @@
+/**
+ * Created by Eunjin Yang on 2019. 3. 18.
+ * Github : http://github.com/jinny920311
+ */
+@mixin responsive($media, $i) {
+  @if $i == 'min'{
+    @media (min-width: $media) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $media) {
+      @content;
+    }
+  }
+}
+//사용법
+//.test {
+//  @include responsive(900px, min) {
+//   color: blue;
+//  }
+//}
+
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+//사용법
+//.test {
+// @include clearfix();
+// }
+//
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+  #{$property}: $value;
+}
+//사용법
+//.test {
+//  @include prefix(transform, rotate(90deg), ('webkit', 'ms'));
+//}
+
+@mixin transition {
+  transition: all 0.2s ease;
+}
+//
+
+
+// 문장 ellipsis 처리
+@mixin textClamp($line) {
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break:break-all;
+  word-wrap:break-word;
+  white-space: normal;
+  box-sizing:border-box;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}
+
+@mixin textClamOne() {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  word-break: break-all;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}
+
+// iOS smooth scroll
+@mixin setWebkitTouchScroll {
+  -webkit-overflow-scrolling: touch;
+}
+
+// webkit scrollbar 숨김 처리
+@mixin setHideScrollbar() {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &::-webkit-scrollbar {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+}
+
+
+@mixin hidden-text {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+}
+
+@mixin shadow {
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,.04);
+}

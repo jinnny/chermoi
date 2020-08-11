@@ -1,0 +1,105 @@
+//header
+.chermoi {
+  &-header {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+    background: $white;
+    &-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 0;
+    }
+    &.is--active {
+      padding: 1rem 2rem;
+    }
+    &__logo {
+      color: $black;
+      font-size: 1.5rem;
+      font-family: $english;
+      .logo--emphasis {
+        color: $blue;
+      }
+    }
+  }
+  &-language__link {
+    font-size: .8rem;
+    color: $lgrey;
+    display: inline-block;
+    & + .chermoi-language__link {
+      &:before {
+        content: '';
+        width: 1px;
+        height: 8px;
+        background: $border;
+        display: inline-block;
+        margin: 0 .4rem 0 .25rem;
+      }
+    }
+    &.is--active {
+      color: $black;
+    }
+  }
+  &-menu {
+    background: #383838;
+    &-list {
+      display: flex;
+      align-items: center;
+    }
+    &__item {
+      color: $white;
+      opacity: 0.9;
+      position: relative;
+      display: block;
+      width: 100%;
+      text-align: center;
+      border-left: 1px solid #454545;
+      &:last-child {
+        border-right: 1px solid #333;
+      }
+      &.active,
+      &:hover {
+        color: $point;
+        opacity: 1;
+        &:after {
+          //content: '';
+          width: 100%;
+          height: 2px;
+          background: $black;
+          display: block;
+          position: absolute;
+          bottom: 5px;
+        }
+      }
+    }
+    &__link {
+      padding: .8rem 1.2rem;
+      font-size: 1rem;
+      font-weight: 500;
+      display: inline-block;
+    }
+    @media all and (max-width: 990px) {
+      display: none;
+      position: fixed;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: $white;
+      &-list {
+        flex-direction: column;
+        height: 100%;
+      }
+      &__item {
+        display: block;
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+}

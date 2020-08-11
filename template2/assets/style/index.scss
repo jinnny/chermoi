@@ -1,0 +1,15 @@
+//@import "vendors/jquery.fullpage.2.9.6.min.css";
+
+@import "utils/var";
+@import "base/fonts";
+@import "base/reset";
+@import "utils/mixin";
+
+@import "layout/header";
+@import "layout/footer";
+@import "layout/common";
+
+@import "components/input";
+@import "components/button";
+
+@import "pages/index";
