@@ -310,3 +310,46 @@
 @-webkit-keyframes bounce{from{bottom:55px;color:rgba(247,247,247,0.2)}to{bottom:80px;color:#f7f7f7}}
 @-o-keyframes bounce{from{bottom:55px;color:rgba(247,247,247,0.2)}to{bottom:80px;color:#f7f7f7}}
 @keyframes bounce{from{bottom:55px;color:rgba(247,247,247,0.2)}to{bottom:80px;color:#f7f7f7}}
+
+.animation {
+  transition: all .4s;
+  &.fade {
+    opacity: 0;
+  }
+  &.slideUp {
+    transform: translateY(-40px);
+    opacity: 0;
+    &.animated {
+      transform: translateY(0px);
+    }
+  }
+  &.slideLeft {
+    transform: translateX(-40px);
+    opacity: 0;
+    &.animated {
+      transform: translateX(0px);
+    }
+  }
+  &.slideRight {
+    transform: translateX(40px);
+    opacity: 0;
+    &.animated {
+      transform: translateX(0px);
+    }
+  }
+  &.animated {
+    opacity: 1;
+  }
+  &.delay {
+    transition-delay: .4s;
+  }
+  &.delay6 {
+    transition-delay: .6s;
+  }
+  &.delay9 {
+    transition-delay: .9s;
+  }
+  &.delay12 {
+    transition-delay: 1.2s;
+  }
+}

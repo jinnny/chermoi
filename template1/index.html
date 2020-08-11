@@ -25,6 +25,7 @@
   <script type="text/javascript" src="assets/js/vendors/jquery.fullpage.extensions.2.9.6.min.js"></script>
   <script type="text/javascript" src="assets/js/vendors/swiper-bundle.6.1.1.min.js"></script>
   <link rel="stylesheet" href="assets/style/index.css">
+  <script type="text/javascript" src="assets/js/index.js"></script>
 </head>
 <body>
   <header class="chermoi-header">
@@ -33,11 +34,11 @@
     </h1>
     <nav class="chermoi-menu">
       <ul class="chermoi-menu-list">
-        <li class="chermoi-menu__item active" data-menuanchor="home"><a class="chermoi-menu__link" href="#firstPage">HOME</a></li>
-        <li class="chermoi-menu__item" data-menuanchor="ourService"><a class="chermoi-menu__link" href="#secondPage">OUT SERVICE</a></li>
-        <li class="chermoi-menu__item" data-menuanchor="portfolio"><a class="chermoi-menu__link" href="#thirdPage">PORTFOLIO</a></li>
-        <li class="chermoi-menu__item" data-menuanchor="contact"><a class="chermoi-menu__link" href="#thirdPage">CONTACT</a></li>
-        <li class="chermoi-menu__item" data-menuanchor="inquiry"><a class="chermoi-menu__link" href="#fourthPage">INQUIRY</a></li>
+        <li class="chermoi-menu__item active" data-menuanchor="home"><a class="chermoi-menu__link" href="#home">HOME</a></li>
+        <li class="chermoi-menu__item" data-menuanchor="ourService"><a class="chermoi-menu__link" href="#ourService">OUT SERVICE</a></li>
+        <li class="chermoi-menu__item" data-menuanchor="portfolio"><a class="chermoi-menu__link" href="#portfolio">PORTFOLIO</a></li>
+        <li class="chermoi-menu__item" data-menuanchor="contact"><a class="chermoi-menu__link" href="#contact">CONTACT</a></li>
+        <li class="chermoi-menu__item" data-menuanchor="inquiry"><a class="chermoi-menu__link" href="#inquiry">INQUIRY</a></li>
       </ul>
     </nav>
   </header>
@@ -50,19 +51,19 @@
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide" style="background: url('./assets/images/first-section.jpg') no-repeat ">
-            <p class="main__text">
+            <p class="main__text animation fade animated">
               we work<br>
               <strong class="main__text--impact">for human</strong>
             </p>
           </div>
           <div class="swiper-slide" style="background: url('http://ksostudio.com/project/files/attach/images/610/fe9e4e97ec88df66b8f560bee4ddbbd6.jpg') no-repeat ">
-            <p class="main__text">
+            <p class="main__text animation fade animated">
               we work<br>
               <strong class="main__text--impact">for human</strong>
             </p>
           </div>
           <div class="swiper-slide" style="background: url('http://ksostudio.com/project/files/attach/images/610/fe7158dfec5794a1843e2e0b4849576c.jpg') no-repeat ">
-            <p class="main__text">
+            <p class="main__text animation fade animated">
               we work<br>
               <strong class="main__text--impact">for human</strong><br>
               <a href="" class="button is--rounded">MORE <i class="fas fa-plus"></i></a>
@@ -77,7 +78,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 pl-0">
-            <header class="service-header is--dark">
+            <header class="service-header is--dark animation fade delay">
               <h2 class="service__title">OUT SERVICE</h2>
               <p class="service__description">
                 Aenean semper vehicula est posuere consequat.<br>
@@ -89,7 +90,7 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-12 col-sm-4 service-content__content mb-5">
+          <div class="col-12 col-sm-4 service-content__content mb-5 animation slideUp delay6">
             <strong class="service-content-content__title mb-2">
               <i class="fas fa-envelope-open mr-2"></i>
               Lorem ipsum
@@ -99,7 +100,7 @@
             </p>
             <a href="" class="button color--point is--rounded">MORE <i class="fas fa-plus"></i></a>
           </div>
-          <div class="col-12 col-sm-4 service-content__content mb-5">
+          <div class="col-12 col-sm-4 service-content__content mb-5 animation slideUp delay9">
             <strong class="service-content-content__title mb-2">
               <i class="fas fa-pen-alt mr-2"></i>
               Quisque
@@ -109,7 +110,7 @@
             </p>
             <a href="" class="button color--point is--rounded">MORE <i class="fas fa-plus"></i></a>
           </div>
-          <div class="col-12 col-sm-4 service-content__content">
+          <div class="col-12 col-sm-4 service-content__content animation slideUp delay12">
             <strong class="service-content-content__title mb-2">
               <i class="fas fa-music mr-2"></i>
               Nunc cursus
@@ -126,7 +127,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 pl-0">
-            <header class="service-header is--narrow-next is--dark">
+            <header class="service-header is--narrow-next is--dark animation slideUp delay6">
               <h2 class="service__title">PORTFOLIO</h2>
               <p class="service__description">
                 Aenean semper vehicula est posuere consequat.
@@ -137,42 +138,42 @@
 <!--      <div class="container is&#45;&#45;wide">-->
       <div class="container">
         <div class="row">
-          <div class="col-12 col-sm-4 portfolio-content__content  p-0">
+          <div class="col-12 col-sm-4 portfolio-content__content  p-0 animation slideLeft delay6">
             <div class="portfolio-content-info">
               <strong class="portfolio-content__date">2020.05</strong>
               <h1 class="portfolio-content__title">건물 디자인</h1>
             </div>
             <img src="assets/images/portfolio-img1.jpg" alt="" class="portfolio__img">
           </div>
-          <div class="col-12 col-sm-4 portfolio-content__content p-0">
+          <div class="col-12 col-sm-4 portfolio-content__content p-0  animation slideUp delay9">
             <img src="assets/images/portfolio-img2.jpg" alt="" class="portfolio__img">
             <div class="portfolio-content-info">
               <strong class="portfolio-content__date">2020.01</strong>
               <h1 class="portfolio-content__title">다이닝룸 인테리어 시공</h1>
             </div>
           </div>
-          <div class="col-12 col-sm-4 portfolio-content__content  p-0">
+          <div class="col-12 col-sm-4 portfolio-content__content  p-0  animation slideRight delay12">
             <div class="portfolio-content-info">
               <strong class="portfolio-content__date">2019.09</strong>
               <h1 class="portfolio-content__title">리빙룸 인테리어 시공</h1>
             </div>
             <img src="assets/images/portfolio-img3.jpg" alt="" class="portfolio__img">
           </div>
-          <div class="col-12 col-sm-4 portfolio-content__content  p-0">
+          <div class="col-12 col-sm-4 portfolio-content__content  p-0  animation slideLeft delay6">
             <div class="portfolio-content-info">
               <strong class="portfolio-content__date">2019.05</strong>
               <h1 class="portfolio-content__title">사무실 인테리어 시공</h1>
             </div>
             <img src="assets/images/portfolio-img4.jpg" alt="" class="portfolio__img">
           </div>
-          <div class="col-12 col-sm-4 portfolio-content__content  p-0">
+          <div class="col-12 col-sm-4 portfolio-content__content  p-0  animation slideUp delay9">
             <img src="assets/images/portfolio-img6.jpg" alt="" class="portfolio__img">
             <div class="portfolio-content-info">
               <strong class="portfolio-content__date">2019.02</strong>
               <h1 class="portfolio-content__title">다이닝룸 인테리어 시공</h1>
             </div>
           </div>
-          <div class="col-12 col-sm-4 portfolio-content__content  p-0">
+          <div class="col-12 col-sm-4 portfolio-content__content  p-0  animation slideRight delay12">
             <div class="portfolio-content-info">
               <strong class="portfolio-content__date">2018.11</strong>
               <h1 class="portfolio-content__title">치킨 인테리어 시공</h1>
@@ -198,12 +199,12 @@
         <div class="row">
           <div class="col-12 col-sm-6 p-0">
             <div class="contact-info p-sm-4">
-              <header class="service-header is--narrow-next is--dark">
+              <header class="service-header is--narrow-next is--dark animation fade delay6">
                 <h2 class="service__title">CONTACT</h2>
                 <p class="service__description">
                   Aenean semper vehicula est posuere consequat.
               </header>
-              <ul class="contact-info-content">
+              <ul class="contact-info-content animation slideLeft delay9">
                 <li class="contact-info__item">
                   <i class="fas fa-map-marked-alt"></i>
                   <p class="contact-info__item-item">서울시 강남구 테헤란로</p>
@@ -219,7 +220,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-12 col-sm-6 p-0 map-area">
+          <div class="col-12 col-sm-6 p-0 map-area animation slideRight delay12">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12660.6638074316!2d127.0386642432787!3d37.504003926953104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca405861e4a67%3A0x73ec1c047764908!2z7ISc7Jq47Yq567OE7IucIOqwleuCqOq1rCDthYztl6TrnoDroZw!5e0!3m2!1sko!2skr!4v1596093987871!5m2!1sko!2skr" width="100%" height="560" frameborder="0" class="iframe-map" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </div>
          </div>
@@ -229,7 +230,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 pl-0">
-            <header class="service-header is--dark is--narrow-next">
+            <header class="service-header is--dark is--narrow-next animation slideUp delay6">
               <h2 class="service__title">INQUIRY</h2>
               <p class="service__description">
                 Aenean semper vehicula est posuere consequat.
@@ -240,7 +241,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-sm-6">
-            <div class="inquiry-content">
+            <div class="inquiry-content animation slideUp delay9">
 <!--              <h2 class="inquiry-content__title">-->
 <!--                inquiry-->
 <!--              </h2>-->
@@ -273,109 +274,6 @@
     </section>
   </div>
   <script>
-    $(document).ready(function() {
-      $('.input-content .input-content__input').focus(function () {
-        $(this).siblings('.input-content__label').addClass('is--active')
-        $(this).parent('.input-content').addClass('is--active')
-      }).blur(function() {
-          if ($(this).val() === '') {
-            $(this).siblings('.input-content__label').removeClass('is--active')
-            $(this).parent('.input-content').removeClass('is--active')
-          }
-        });
-      $('#fullpage').fullpage({
-        parallax: true,
-        menu: '.chermoi-menu',
-        css3: true,
-        navigation: true,
-        navigationPosition: 'right',
-        fadingEffect: true,
-        continuousVertical: true,
-        navigationTooltips: ['HOME', 'OUR SERVICE', 'PORTFOLIO', 'CONTACT', 'INQUIRY'],
-        showActiveTooltip: true,
-        anchors:['home', 'ourService', 'portfolio', 'contact', 'inquiry'],
-        afterLoad: function (anchorLink, index) {
-          if (index === 1) {
-            $('.chermoi-header').removeClass('is--active');
-          }else {
-            $('.chermoi-header').addClass('is--active');
-          }
-        },
-        onLeave: function (index, nextIndex, direction) {
-          if (index === 1) {
-            $('.chermoi-header').addClass('is--active');
-            if (direction === 'down') {
-              $('.slide__img img').eq(0).removeClass('ani_main_img_1 ani_main_img_1r');
-              $('.slide__img img').eq(1).removeClass('ani_main_img_2 ani_main_img_2r');
-              $('.slide__img img').eq(2).removeClass('ani_main_img_3 ani_main_img_3r');
-              $('.slide__title .animationDelay').removeClass('fadeInUp animated');
-              if (nextIndex === 2) {
-                $('.wallet-process .animatable').addClass('fadeInUp animated');
-              }
-              else if (nextIndex === 3) {
-                $('.face-check .face-check-left .animatable').addClass('fadeInUp animated');
-                $('.face-check .face-check-right.animatable').addClass('bounceInRight animated');
-              } else if (nextIndex === 4) {
-                $('.charge-conv .charge-conv-left.animatable').addClass('bounceInLeft animated');
-                $('.charge-conv .charge-conv-right .animatable').addClass('fadeInUp animated');
-              } else if (nextIndex === 5) {
-                $('.safe-fin-tech .animatable').addClass('fadeInUp animated');
-              } else if (nextIndex === 6) {
-                $('.starpay-use .starpay-use__title.animatable').addClass('fadeIn animated');
-                $('.starpay-use .starpay-use-list .animatable').addClass('bounceInLeft animated');
-              }
-            }
-          } else if (index > 1) {
-            if (nextIndex === 1 && direction === 'up') {
-              $('.chermoi-header').removeClass('is--active');
-            } else if (nextIndex === 2) {
-              $('.wallet-process .animatable').addClass('fadeInUp animated');
-              $('.face-check .animatable, .charge-conv .animatable, .safe-fin-tech .animatable, .starpay-use .animatable')
-                .removeClass('fadeInUp bounceInRight bounceInLeft animated');
-            } else if (nextIndex === 3) {
-              $('.face-check .face-check-left .animatable').addClass('fadeInUp animated');
-              $('.face-check .face-check-right.animatable').addClass('bounceInRight animated');
-              $('.wallet-process .animatable, .charge-conv .animatable, .safe-fin-tech .animatable, .starpay-use .animatable')
-                .removeClass('fadeInUp bounceInRight bounceInLeft animated');
-            } else if (nextIndex === 4) {
-              $('.charge-conv .charge-conv-left.animatable').addClass('bounceInLeft animated');
-              $('.charge-conv .charge-conv-right .animatable').addClass('fadeInUp animated');
-              $('.wallet-process .animatable, .face-check .animatable, .safe-fin-tech .animatable, .starpay-use .animatable')
-                .removeClass('fadeInUp bounceInRight bounceInLeft animated');
-            } else if (nextIndex === 5) {
-              $('.safe-fin-tech .animatable').addClass('fadeInUp animated');
-              $('.wallet-process .animatable, .face-check .animatable, .charge-conv .animatable, .starpay-use .animatable')
-                .removeClass('fadeInUp bounceInRight bounceInLeft animated');
-            } else if (nextIndex === 6) {
-              $('.starpay-use .starpay-use__title.animatable').addClass('fadeIn animated');
-              $('.starpay-use .starpay-use-list .animatable').addClass('bounceInLeft animated');
-              $('.wallet-process .animatable, .face-check .animatable, .charge-conv .animatable, .safe-fin-tech .animatable')
-                .removeClass('fadeInUp bounceInRight bounceInLeft animated');
-            }
-          }
-        }
-      })
-      var mySwiper = new Swiper('.swiper-container', {
-        // Optional parameters
-        loop: true,
-        effect: 'fade',
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        }
-      })
-
-      $(window).scroll(function(){
-        let max = 1000; //100% 투명할때의 스크롤 값
-        let scrollPX = $(this).scrollTop();
-        console.log(scrollPX)
-        if( scrollPX  < max ) {
-          $("#bg").css({"opacity": (max-scrollPX)/max });
-        }else{
-          $("#bg").css({"opacity": 0});
-        }
-      });
-    });
   </script>
 </body>
 </html>
