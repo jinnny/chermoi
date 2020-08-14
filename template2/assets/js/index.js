@@ -16,11 +16,19 @@ $(document).ready(function() {
   });
   const mySwiper = new Swiper('.swiper-container', {
     // Optional parameters
+    autoplay: {
+      delay: 6000
+    },
     loop: true,
     effect: 'fade',
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
+    },
+    on: {
+      // slideChangeTransitionStart: function (what) {
+      //   console.log(what)
+      // }
     }
   })
 
